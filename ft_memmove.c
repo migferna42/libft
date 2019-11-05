@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 13:09:29 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/05 07:35:56 by migferna         ###   ########.fr       */
+/*   Created: 2019/11/04 19:16:06 by migferna          #+#    #+#             */
+/*   Updated: 2019/11/05 13:18:53 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *ps;
+	size_t			i;
+	unsigned char	*pdst;
+	unsigned char	*psrc;
 
-	ps = (unsigned char *)s;
-	while (n-- > 0)
-		*(ps++) = '\0';
+	i = 0;
+	pdst = (unsigned char *)dst;
+	psrc = (unsigned char *)src;
+	if (psrc < pdst)
+	{
+		printf("Menor");
+		while (len-- > 0)
+			pdst[len] = psrc[len];
+	}
+	else
+	{
+		printf("Mayor");
+		while (i < len)
+			pdst[i] = psrc[i];
+	}
+	return (pdst);
 }
