@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 19:16:06 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/05 18:20:27 by migferna         ###   ########.fr       */
+/*   Created: 2019/11/05 15:49:51 by migferna          #+#    #+#             */
+/*   Updated: 2019/11/05 19:11:03 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_atoi(const char *str)
 {
-	size_t			i;
-	unsigned char	*pdst;
-	unsigned char	*psrc;
+	int sign;
+	int nbr;
 
-	i = 0;
-	pdst = (unsigned char *)dst;
-	psrc = (unsigned char *)src;
-	if (psrc < pdst)
-	{
-		while (len-- > 0)
-			pdst[len] = psrc[len];
-	}
-	else
-	{
-		while (i < len)
-			pdst[i] = psrc[i];
-	}
-	return (pdst);
+	sign = 1;
+	nbr = 0;
+	while (ft_isspace(*str))
+		*(str++);
+	if (*str == '-' || *str == '+')
+		if (*str == '-')
+			sign = -1;
+	while (*str >= '0' && *str <= '9')
+		nbr = (nbr * 10) + (*str - '0');
+	return (nbr * sign);
 }

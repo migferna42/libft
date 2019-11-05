@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 19:16:06 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/05 18:20:27 by migferna         ###   ########.fr       */
+/*   Created: 2019/11/05 15:40:38 by migferna          #+#    #+#             */
+/*   Updated: 2019/11/05 15:46:37 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+size_t strlcpy(char *dst, const char src, size_t dstsize)
 {
-	size_t			i;
-	unsigned char	*pdst;
-	unsigned char	*psrc;
 
-	i = 0;
-	pdst = (unsigned char *)dst;
-	psrc = (unsigned char *)src;
-	if (psrc < pdst)
-	{
-		while (len-- > 0)
-			pdst[len] = psrc[len];
-	}
-	else
-	{
-		while (i < len)
-			pdst[i] = psrc[i];
-	}
-	return (pdst);
 }
