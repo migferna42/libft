@@ -6,13 +6,13 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:40:38 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/05 15:46:37 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/06 15:08:34 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t strlcpy(char *dst, const char src, size_t dstsize)
+size_t	strlcpy(char *dst, const char src, size_t dstsize)
 {
 
 }

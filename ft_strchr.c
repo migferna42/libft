@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:32:53 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/05 15:33:09 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/06 08:29:31 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c)
+	while (*s)
 	{
-		if (!(*s))
-			return (NULL);
+		if (*s == c)
+			return ((char *)s);
 	}
-	return ((char *)s);
+	return (NULL);
 }
