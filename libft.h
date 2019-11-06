@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 09:56:23 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/06 14:29:21 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/06 15:22:47 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		tolower(int c);
 char	*strchar(const char *s, int c);
 char	*strrchar(const char *s, int c);
 int		strncmp(const char *s1, const char *s2, size_t n);
+size_t	strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	strlcat(char *dst, const char *src, size_t dstsize);
 char	*strnstr(const char *haystack, const char *needle, size_t len);
 int		atoi(int c);
