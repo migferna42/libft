@@ -6,13 +6,13 @@
 #    By: migferna <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/06 16:26:57 by migferna          #+#    #+#              #
-#    Updated: 2019/11/07 08:03:39 by migferna         ###   ########.fr        #
+#    Updated: 2019/11/07 11:46:55 by migferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_memset.c
+SRCS = ft_memset.c ft_atoi.c ft_isspace.c ft_strdup.c ft_strlen.c
 
 OBJS = ${SRCS:.c=.o}
 
