@@ -6,15 +6,15 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 09:56:23 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/06 15:22:47 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/07 10:10:32 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <unistd.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -29,15 +29,15 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-int		isspace(int c);
-int		toupper(int c);
-int		tolower(int c);
-char	*strchar(const char *s, int c);
-char	*strrchar(const char *s, int c);
-int		strncmp(const char *s1, const char *s2, size_t n);
-size_t	strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	strlcat(char *dst, const char *src, size_t dstsize);
-char	*strnstr(const char *haystack, const char *needle, size_t len);
-int		atoi(int c);
+int		ft_isspace(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_strchar(const char *s, int c);
+char	*ft_strrchar(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int		ft_atoi(const char *str);
 
 #endif
