@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 09:56:23 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/07 15:22:00 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/08 07:56:14 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int		ft_atoi(const char *str);
 char	*ft_strdup(const char *s1);
 
 char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
+char	*ft_strcat(char *s1, const char *s2);
 #endif
