@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 19:22:02 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/07 14:48:33 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/09 07:27:04 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	uc = (unsigned char)c;
 	while (it < n)
 	{
-		if (ps[it] == c)
+		if (ps[it] == uc)
 			return ((void *)&ps[it]);
 		it++;
 	}
