@@ -1,15 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 15:47:05 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/09 12:32:00 by migferna         ###   ########.fr       */
+/*   Created: 2019/11/09 09:24:28 by migferna          #+#    #+#             */
+/*   Updated: 2019/11/10 08:24:12 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	(void) len;
+	while (start-- > 0)
+		s++;
+	return ((char *)s);
+}

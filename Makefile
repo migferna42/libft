@@ -6,37 +6,43 @@
 #    By: migferna <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/06 16:26:57 by migferna          #+#    #+#              #
-#    Updated: 2019/11/09 09:19:19 by migferna         ###   ########.fr        #
+#    Updated: 2019/11/10 09:15:24 by migferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_memset.c ft_atoi.c ft_isspace.c ft_strdup.c ft_strlen.c ft_putchar.c ft_putstr.c ft_strcpy.c ft_strncpy.c ft_strncpy.c ft_strcat.c ft_strncat.c ft_strchr.c ft_strrchr.c ft_putchar_fd.c ft_putstr_fd.c
-#SRCS = $(wildcard *.c)
+INC_DIR = includes
+SRC_DIR = srcs
+OBJ_DIR = objs
 
+INCLS	= $(INC_DIR)
+SRCS	= $(wildcard $(SRC_DIR)/*.c)
+OBJS	= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
-OBJS = ${SRCS:.c=.o}
-
-CC = CC
+CC = cc
 RM = rm -rf
 AR = ar rcs
 RANLIB = ranlib
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS += -Wall -Werror -Wextra -g
+LFLAGS += -I.
 
-.c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+all:		obj
+			$(MAKE) $(NAME)
 
-$(NAME):
-			${CC} $(CFLAGS) -c $(SRCS)
+obj:		
+			mkdir -p $(OBJ_DIR)
+
+$(NAME):	$(OBJS)
 			$(AR) $(NAME) $(OBJS)
-			#$(RANLIB) $(NAME)
+			$(RANLIB) $(NAME)
 
-all:		$(NAME)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+		$(CC) $(CFLAGS) -c $< -o $@ $(LFLAGS)/$(INCLS)
 
 clean:
-			$(RM) ${OBJS}
+			$(RM) ${OBJS} $(OBJ_DIR)
 
 fclean:		clean
 			$(RM) $(NAME)
