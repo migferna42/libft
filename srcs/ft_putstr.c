@@ -14,9 +14,12 @@
 
 void	ft_putstr(char *s)
 {
-	while (*s)
+	if (s)
 	{
-		write(1, s, 1);
-		s++;
+		while (*s)
+		{
+			write(1, s, 1);
+			s++;
+		}
 	}
 }
