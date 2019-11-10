@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 09:56:23 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/09 12:39:33 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/10 11:55:00 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,16 @@ char			*ft_strdup(const char *s1);
 
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strncpy(char *dst, const char *src, size_t len);
-void			ft_putchar(char c);
+int				ft_putchar(char c);
 void			ft_putstr(char *s);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 int				ft_strcmp(const char *s1, const char *s2);
-void			ft_putchar_fd(char c, int fd);
+int				ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *c, int fd);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
+int				ft_iswspace(int c);
 
 #endif
