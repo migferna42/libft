@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 08:55:47 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/09 09:19:51 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/11 07:45:25 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	ft_putstr_fd(char *s, int fd)
 	{
 		while (*s && ++ret >= 0)
 			ret = ft_putchar_fd(*s++, fd);
-	}	
+	}
 	return (ret);
 }

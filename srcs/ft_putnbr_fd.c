@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/10 11:22:03 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/11 07:46:03 by migferna         ###   ########.fr       */
+/*   Created: 2019/11/11 07:38:46 by migferna          #+#    #+#             */
+/*   Updated: 2019/11/11 07:40:53 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		j;
-	char	*str;
-	(void)	set;
 
-	if (!(*s1))
-		return (NULL);
-	while (*s1 && ft_iswspace(*s1))
-		s1++;
-	j = ft_strlen(s1);
-	while (ft_iswspace(*s1 + j))
-		j--;
-	if (!(str = malloc(sizeof(char) * (j + 1))))
-		return (NULL);
-	ft_strncpy(str, s1, j + 1);
-	return (str);
 }
