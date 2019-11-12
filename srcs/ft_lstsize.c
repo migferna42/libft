@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 14:51:35 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/11 15:30:10 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/12 07:47:39 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int size;
+	int cont;
 	t_list *ptr;
 	
-	size = 0;
+	cont = 0;
 	ptr = lst;
 	while (ptr)
 	{
-		ptr = lst->next;
-		size++;
+		ptr = ptr->next;
+		cont++;
 	}
-	return (size);
+	return (cont);
 }
