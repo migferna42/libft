@@ -6,12 +6,11 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 11:22:03 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/13 12:31:51 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/13 15:48:02 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -22,9 +21,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	k = 0;
-	len = 0;
-	while (s1[len])
-		len++;
+	len = ft_strlen(s1);
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	while (ft_inset(s1[i], set))
 		i++;
 	while (ft_inset(s1[len - 1], set))
@@ -42,9 +41,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	str[k] = '\0';
 	return (str);
-}
-
-int main(void)
-{
-	printf("%s\n",ft_strtrim("   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n       \n \n \t\t\n  ", " \n\t") );
 }
