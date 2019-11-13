@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 09:56:23 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/10 11:55:00 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/13 12:43:05 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ int				ft_putchar_fd(char c, int fd);
 int			ft_putstr_fd(char *c, int fd);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_iswspace(int c);
+int				ft_inset(char c, char const *set);
+
 
 #endif

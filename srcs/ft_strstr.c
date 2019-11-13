@@ -6,18 +6,18 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 12:17:59 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/09 11:35:29 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/13 07:37:23 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
 	int j;
 
-	if (needle[0] == '\0')
+	if (!needle)
 		return ((char *)haystack);
 	i = 0;
 	while (haystack[i] != '\0')
