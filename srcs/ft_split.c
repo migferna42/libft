@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 07:59:38 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/14 17:58:44 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/14 19:28:45 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,16 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (word < cont)
 	{
-		table[word] = malloc(sizeof(char) * ft_strnlen(s, c) + 1);
+		table[word] = malloc(sizeof(char) * ft_strnlen(&s[it], c) + 1);
 		if (!table[word])
 			return (NULL);
 		j = 0;
 		while (s[it] == c)
 			it++;
-		while (s[it] != c)
-			table[word][j++] = *table[it++];
+		while (s[it] != c && s[it])
+			table[word][j++] = s[it++];
 		table[word][j] = '\0';
+		word++;
 	}
 	table[word] = NULL;
 	return (table);

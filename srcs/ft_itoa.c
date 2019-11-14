@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 15:38:59 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/14 19:56:25 by migferna         ###   ########.fr       */
+/*   Created: 2019/11/14 19:28:54 by migferna          #+#    #+#             */
+/*   Updated: 2019/11/14 20:06:54 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_itoa(int n)
 {
-	size_t	it;
-	char	*s2;
-	size_t	size;
-
+	char	*str;
+	int		size;
+	int		it;
+	
+	size = 10;
 	it = 0;
-	size = ft_strlen(s1);
-	if (!(s2 = malloc(sizeof(char) * size + 1)))
-		return (0);
-	while (it < size)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	str = malloc(sizeof(char) * size + 1);
+	if (!str)
+		return (NULL);
+	str[size] = 0;
+	if (n < 0)
 	{
-		s2[it] = s1[it];
+		str[0] = '-';
+		n *= -1;
 		it++;
 	}
-	s2[it] = '\0';
-	return (s2);
+	while (it < size--)
+	{
+		str[size] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (str);
 }
