@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 12:31:03 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/07 12:33:03 by migferna         ###   ########.fr       */
+/*   Created: 2019/11/14 07:59:38 by migferna          #+#    #+#             */
+/*   Updated: 2019/11/14 08:42:02 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *s)
+char	**ft_split(char const *s, char c)
 {
-	if (s)
-	{
-		while (*s)
-		{
-			write(1, s, 1);
-			s++;
-		}
-	}
+	char	 **table;
+	int		cont;
+	(void)s;
+	(void)c;
+
+	cont = 0;
+	table = malloc(sizeof(char *) * cont);
+	if (!table)
+		return (NULL);
+	return (table);
 }

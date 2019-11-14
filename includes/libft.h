@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 09:56:23 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/13 17:35:01 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/14 09:29:43 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,23 +43,15 @@ char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
-char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strnstr(const char *haystack,
 							const char *needle, size_t len);
 int				ft_atoi(const char *str);
 char			*ft_strdup(const char *s1);
 
-char			*ft_strcpy(char *dst, const char *src);
-char			*ft_strncpy(char *dst, const char *src, size_t len);
-int				ft_putchar(char c);
-void			ft_putstr(char *s);
-char			*ft_strcat(char *s1, const char *s2);
-char			*ft_strncat(char *s1, const char *s2, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-int				ft_strcmp(const char *s1, const char *s2);
 int				ft_putchar_fd(char c, int fd);
-int			ft_putstr_fd(char *c, int fd);
+int				ft_putstr_fd(char *c, int fd);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_iswspace(int c);
 int				ft_inset(char c, char const *set);
