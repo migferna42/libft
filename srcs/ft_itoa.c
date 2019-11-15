@@ -6,11 +6,28 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 19:28:54 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/14 20:06:54 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/15 08:08:58 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_nbrlen(int nbr)
+{
+	int len;
+
+	len = 0;
+	if (nbr == 0)
+		return (1);
+	if (nbr < 0)
+		len++;
+	while (nbr)
+	{
+		nbr /= 10;
+		len += 1;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {
@@ -18,7 +35,7 @@ char	*ft_itoa(int n)
 	int		size;
 	int		it;
 	
-	size = 10;
+	size = ft_nbrlen(n);
 	it = 0;
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
