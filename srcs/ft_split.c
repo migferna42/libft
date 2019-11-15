@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 07:59:38 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/15 09:35:53 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/15 10:30:57 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char		**ft_split(char const *s, char c)
 	int		j;
 	int		it;
 
+	if (!s)
+		return (NULL);
 	it = 0;
 	j = 0;
 	word = 0;
