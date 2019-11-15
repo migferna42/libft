@@ -6,13 +6,13 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 19:28:54 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/15 08:08:58 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/15 09:34:11 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_nbrlen(int nbr)
+static int		ft_nbrlen(int nbr)
 {
 	int len;
 
@@ -29,12 +29,12 @@ static int	ft_nbrlen(int nbr)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*str;
 	int		size;
 	int		it;
-	
+
 	size = ft_nbrlen(n);
 	it = 0;
 	if (n == -2147483648)

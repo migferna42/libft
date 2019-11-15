@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 11:10:49 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/13 09:15:27 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/15 09:30:52 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ t_list	*ft_lstnew(void const *content)
 	new->next = NULL;
 	return (new);
 }
-

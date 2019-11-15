@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 07:59:38 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/14 19:28:45 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/15 09:35:53 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_words_cont(char const *s, char c)
 {
 	int it;
 	int cont;
-	
+
 	it = 0;
 	cont = 0;
 	while (s[it])
@@ -24,9 +24,11 @@ static int	ft_words_cont(char const *s, char c)
 		if (s[it] == c)
 			it++;
 		else
+		{
 			cont++;
 			while (s[it] != c)
 				it++;
+		}
 	}
 	return (cont);
 }
@@ -44,7 +46,7 @@ static int	ft_strnlen(char const *s, char c)
 	return (cont);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**table;
 	int		cont;
