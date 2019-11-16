@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 11:22:03 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/15 15:45:33 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/16 15:53:54 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_inset(char c, char const *s)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	k;
 	size_t	len;
