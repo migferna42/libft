@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 15:37:50 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/16 15:45:30 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/16 15:58:52 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-t_list			ft_lstnew(void const *content);
+t_list			*ft_lstnew(void const *content);
 
 #endif
