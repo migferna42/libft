@@ -6,24 +6,31 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 12:50:24 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/16 13:41:26 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/18 08:32:49 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
-{
-	t_list *it;
-	t_list *tmp;
+{	
+	t_list *head;
+	t_list *list;
 
-	it = lst;
-	while (lst)
+	if (!lst)
+		return (NULL);
+	list = ft_lstnew(f(lst->content));
+	head = list;
+	while (lst->next)
 	{
-		it->content = f(lst->content);
-		tmp = *lst;
 		lst = lst->next;
-		it = it->next;
+		if (!(list->next = ft_lstnew(f(lst->content))))
+		{
+			del(list->next);
+			free(list->next);
+			return (NULL);
+		}
+		list = list->next;
 	}
-	return it;
+	return (head);
 }
