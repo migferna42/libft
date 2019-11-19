@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 07:42:28 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/19 08:49:53 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/19 12:22:08 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *s3;
-	int it;
-	int it2;
-	
+	char	*s3;
+	int		it;
+	int		it2;
+
 	if (!s1 || !s2)
 		return (NULL);
 	it = 0;
