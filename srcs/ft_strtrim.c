@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 11:22:03 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/18 09:43:10 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/19 07:59:17 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	while (ft_inset(s1[i], set))
 		i++;
-	while (ft_inset(s1[len - 1], set))
+	while (len > 0 && ft_inset(s1[len - 1], set))
 		len--;
 	if (len < i)
 		len = i;
