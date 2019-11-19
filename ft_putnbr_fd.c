@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 07:38:46 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/11 08:01:00 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/19 16:13:14 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		nbr = (unsigned int)n;
 	if (nbr < 10)
-		ft_putchar_fd(n + '0', fd);
+		ft_putchar_fd(nbr + '0', fd);
 	else
 	{
 		ft_putnbr_fd(nbr / 10, fd);
