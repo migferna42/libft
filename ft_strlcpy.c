@@ -6,11 +6,11 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:38:25 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/15 09:27:43 by migferna         ###   ########.fr       */
+/*   Updated: 2019/11/19 12:19:29 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
