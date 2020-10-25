@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'ubuntu:latest'
       args '--network taller_mynet'
+      image 'runner'
     }
 
   }
