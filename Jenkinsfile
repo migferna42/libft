@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'ubuntu'
       args '--network jenkins-blue-ocean-tutorial_mynet'
+      image 'ubuntu:latest'
     }
 
   }
