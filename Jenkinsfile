@@ -19,7 +19,10 @@ pipeline {
           git(url: 'https://github.com/alelievr/libft-unit-test', branch: 'master')
         }
 
-        sh 'make f'
+        dir(path: 'cd ./libft-unit-test/') {
+          sh 'make f'
+        }
+
       }
     }
 
