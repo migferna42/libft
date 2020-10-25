@@ -13,5 +13,15 @@ pipeline {
       }
     }
 
+    stage('Test') {
+      steps {
+        dir(path: 'cd ..') {
+          git(url: 'https://github.com/alelievr/libft-unit-test', branch: 'master')
+        }
+
+        sh 'make f'
+      }
+    }
+
   }
 }
