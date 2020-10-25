@@ -20,7 +20,7 @@ pipeline {
         }
 
         dir(path: '/var/jenkins_home/workspace/libft-unit-test') {
-          sh 'make f'
+          sh './run_test'
         }
 
       }
