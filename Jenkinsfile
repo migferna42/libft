@@ -15,11 +15,11 @@ pipeline {
 
     stage('Test') {
       steps {
-        dir(path: 'cd ..') {
+        dir(path: '..') {
           git(url: 'https://github.com/alelievr/libft-unit-test', branch: 'master')
         }
 
-        dir(path: 'cd ./libft-unit-test/') {
+        dir(path: './libft-unit-test') {
           sh 'make f'
         }
 
