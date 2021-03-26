@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 12:50:24 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/18 09:24:01 by migferna         ###   ########.fr       */
+/*   Updated: 2021/03/26 15:38:22 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *head;
-	t_list *list;
+	t_list	*head;
+	t_list	*list;
 
 	if (!lst)
 		return (NULL);
@@ -24,7 +24,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst->next)
 	{
 		lst = lst->next;
-		if (!(list->next = ft_lstnew(f(lst->content))))
+		list->next = ft_lstnew(f(lst->content));
+		if (!list->next)
 		{
 			del(list->next);
 			free(list->next);

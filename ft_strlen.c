@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 19:34:59 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/05 18:55:22 by migferna         ###   ########.fr       */
+/*   Updated: 2021/03/26 15:07:09 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t cont;
+	size_t	cont;
 
 	cont = 0;
 	while (*s++)

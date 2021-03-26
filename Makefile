@@ -6,7 +6,7 @@
 #    By: migferna <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/06 16:26:57 by migferna          #+#    #+#              #
-#    Updated: 2019/11/19 12:11:59 by migferna         ###   ########.fr        #
+#    Updated: 2021/03/26 19:32:17 by migferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,8 +80,8 @@ bonus:		$(OBJS) $(OBJS_BONUS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ $(LFLAGS)
 
-clean:
-			$(RM) ${OBJS} $(OBJ_DIR)
+clean: 		
+			$(RM) $(OBJS) $(OBJ_DIR) $(OBJS_BONUS)
 
 fclean:		clean
 			$(RM) $(NAME)

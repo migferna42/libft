@@ -1,0 +1,35 @@
+# This is a basic linter workflow
+name: norminetteV3
+
+on: push
+ 
+jobs:
+  linter:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9]
+    steps:
+      - name: Checkout to project repository
+        uses: actions/checkout@v2
+      - name: Checkout linter from public repository
+        uses: actions/checkout@v2
+        with:
+          repository: 42School/norminette
+          path: linter
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-pyhton@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip setuptools
+          python3 -m pip install norminette
+      - name: Runs norminette linter
+        run: |
+          norminette | tee output
+          echo "NORM_ERRORS=$(grep -E 'KO!' output | wc -l)" >> $GITHUB_ENV
+      - name: Checks norminette linter result
+        run: |
+          echo "Norminette errors found: $NORM_ERRORS"
+          [[ $NORM_ERRORS == 0 ]]

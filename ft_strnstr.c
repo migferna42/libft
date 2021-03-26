@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:47:05 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/15 09:36:56 by migferna         ###   ########.fr       */
+/*   Updated: 2021/03/26 15:05:18 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (haystack[i] != '\0' && i < (int)len)

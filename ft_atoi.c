@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:49:51 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/18 09:58:26 by migferna         ###   ########.fr       */
+/*   Updated: 2021/03/26 15:14:42 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 static int	ft_isspace(int c)
 {
-	if (c == '\v' || c == '\n' || c == '\t' ||
-		c == '\r' || c == '\f' || c == ' ')
+	if (c == '\v' || c == '\n' || c == '\t'
+		|| c == '\r' || c == '\f' || c == ' ')
 		return (1);
 	return (0);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int sign;
-	int nbr;
+	int	sign;
+	int	nbr;
 
 	sign = 1;
 	nbr = 0;

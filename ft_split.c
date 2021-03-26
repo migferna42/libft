@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 07:59:38 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/15 11:53:15 by migferna         ###   ########.fr       */
+/*   Updated: 2021/03/26 15:44:05 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_words_cont(char const *s, char c)
 {
-	int it;
-	int cont;
+	int	it;
+	int	cont;
 
 	it = 0;
 	cont = 0;
@@ -35,7 +35,7 @@ static int	ft_words_cont(char const *s, char c)
 
 static int	ft_strnlen(char const *s, char c)
 {
-	int cont;
+	int	cont;
 
 	cont = 0;
 	while (*s != c)
@@ -46,7 +46,7 @@ static int	ft_strnlen(char const *s, char c)
 	return (cont);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**table;
 	int		word;
@@ -56,13 +56,14 @@ char		**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	it = 0;
-	j = 0;
 	word = 0;
-	if (!(table = malloc(sizeof(char *) * ft_words_cont(s, c) + 1)))
+	table = malloc(sizeof(char *) * ft_words_cont(s, c) + 1);
+	if (!table)
 		return (NULL);
 	while (word < ft_words_cont(s, c))
 	{
-		if (!(table[word] = malloc(sizeof(char) * ft_strnlen(&s[it], c) + 1)))
+		table[word] = malloc(sizeof(char) * ft_strnlen(&s[it], c) + 1);
+		if (!(table[word]))
 			return (NULL);
 		j = 0;
 		while (s[it] == c)

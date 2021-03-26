@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:40:38 by migferna          #+#    #+#             */
-/*   Updated: 2019/11/09 12:24:48 by migferna         ###   ########.fr       */
+/*   Updated: 2021/03/26 15:20:00 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t len;
-	size_t cont;
+	size_t	len;
+	size_t	cont;
 
 	len = 0;
 	cont = 0;
