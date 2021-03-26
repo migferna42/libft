@@ -18,7 +18,7 @@ jobs:
           repository: 42School/norminette
           path: linter
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-pyhton@v2
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
