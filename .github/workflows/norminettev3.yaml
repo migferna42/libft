@@ -12,11 +12,13 @@ jobs:
     steps:
       - name: Checkout to project repository
         uses: actions/checkout@v2
+
       - name: Checkout linter from public repository
         uses: actions/checkout@v2
         with:
           repository: 42School/norminette
           path: linter
+
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -27,6 +29,7 @@ jobs:
           python3 -m pip install norminette
       - name: Runs norminette linter
         run: |
+          cd linter
           norminette | tee output
           echo "NORM_ERRORS=$(grep -E 'KO!' output | wc -l)" >> $GITHUB_ENV
       - name: Checks norminette linter result
