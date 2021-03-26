@@ -6,7 +6,7 @@
 /*   By: migferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 07:59:38 by migferna          #+#    #+#             */
-/*   Updated: 2021/03/26 15:44:05 by migferna         ###   ########.fr       */
+/*   Updated: 2021/03/26 19:49:15 by migferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,19 @@ static int	ft_strnlen(char const *s, char c)
 	return (cont);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**fill_table(int count, char const *s, char c)
 {
 	char	**table;
 	int		word;
 	int		j;
 	int		it;
 
-	if (!s)
+	table = malloc(sizeof(char *) * count + 1);
+	if (!table)
 		return (NULL);
 	it = 0;
 	word = 0;
-	table = malloc(sizeof(char *) * ft_words_cont(s, c) + 1);
-	if (!table)
-		return (NULL);
-	while (word < ft_words_cont(s, c))
+	while (word < count)
 	{
 		table[word] = malloc(sizeof(char) * ft_strnlen(&s[it], c) + 1);
 		if (!(table[word]))
@@ -74,4 +72,14 @@ char	**ft_split(char const *s, char c)
 	}
 	table[word] = NULL;
 	return (table);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int	count;
+
+	if (!s)
+		return (NULL);
+	count = ft_words_cont(s, c);
+	return (fill_table(count, s, c));
 }
